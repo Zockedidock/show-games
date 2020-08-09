@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Launcher</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div id="addGameButtonParent">
+                    <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="addGameButton">
+                    Add Game
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="addParent" id="addParentDiv">
+                    <div class="addI">
+                        <div class="add">
+                            <div class="title">
+                                <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="closeButton">
+                                    X
+                                </button>
+                                <h1 class="h3 mb-3 font-weight-normal" style="color: black;">Add Game</h1>
+                            </div>
+                            <input placeholder="Icon path" type="text" id="inputPath" class="form-control mb-2" required autoFocus/>
+                            <input placeholder="Game name" type="text" id="inputName" class="form-control mb-2" required/>
+                            <input placeholder="Game version" type="text" id="inputVersion" class="form-control mb-2" required/>
+                    
+                            <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="addButton">
+                            Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="root">
+        </div>
+        
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
