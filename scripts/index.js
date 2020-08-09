@@ -13,8 +13,15 @@ var gameContainer = function (iconPath, name, version) {
     gameDiv.appendChild(img);
     gameDiv.appendChild(gameName);
     gameDiv.appendChild(gameVersion);
+    gameName.onclick = function () {
+        var oShell = new ActiveXObject("Shell.Application");
+        var commandtoRun = "C:\\Windows\\notepad.exe";
+        oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+    };
 };
-gameContainer("https://cdn.icon-icons.com/icons2/1678/PNG/512/wondicon-ui-free-home_111275.png", "Gameidk", "10.5");
+// just for testing
+gameContainer("https://raw.githubusercontent.com/mmtrt/leagueoflegends/master/snap/gui/leagueoflegends.png", "League of Legends", "v10.16");
+// --
 var addButton = document.getElementById("addButton");
 var closeButton = document.getElementById("closeButton");
 var addGameButton = document.getElementById("addGameButton");

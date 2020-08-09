@@ -19,11 +19,13 @@ const gameContainer = (iconPath: string, name: string, version: string) => {
     gameDiv.appendChild(gameVersion)
 }
 
+// just for testing
 gameContainer(
-    "https://cdn.icon-icons.com/icons2/1678/PNG/512/wondicon-ui-free-home_111275.png",
-    "Gameidk",
-    "10.5"
+    "https://raw.githubusercontent.com/mmtrt/leagueoflegends/master/snap/gui/leagueoflegends.png",
+    "League of Legends",
+    "v10.16"
 )
+// --
 
 const addButton = document.getElementById("addButton")
 const closeButton = document.getElementById("closeButton")
