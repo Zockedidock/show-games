@@ -13,11 +13,6 @@ var gameContainer = function (iconPath, name, version) {
     gameDiv.appendChild(img);
     gameDiv.appendChild(gameName);
     gameDiv.appendChild(gameVersion);
-    gameName.onclick = function () {
-        var oShell = new ActiveXObject("Shell.Application");
-        var commandtoRun = "C:\\Windows\\notepad.exe";
-        oShell.ShellExecute(commandtoRun, "", "", "open", "1");
-    };
 };
 // just for testing
 gameContainer("https://raw.githubusercontent.com/mmtrt/leagueoflegends/master/snap/gui/leagueoflegends.png", "League of Legends", "v10.16");
