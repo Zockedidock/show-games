@@ -8,6 +8,9 @@
     </head>
     <body>
         <div id="root">
+            <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="loadGamesButton">
+                Load Games
+            </button>
         </div>
         <ul>
             <li>
@@ -22,14 +25,15 @@
                     <div class="addI">
                         <div class="add">
                             <div class="title">
-                                <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="closeButton">
+                                <button class="btn btn-lg btn-danger btn-block mt-2" type="submit" id="closeButton">
                                     X
                                 </button>
                                 <h1 class="h3 mb-3 font-weight-normal" style="color: black;">Add Game</h1>
                             </div>
-                            <input placeholder="Icon path" type="text" id="inputPath" class="form-control mb-2" required autoFocus/>
-                            <input placeholder="Game name" type="text" id="inputName" class="form-control mb-2" required/>
-                            <input placeholder="Game version" type="text" id="inputVersion" class="form-control mb-2" required/>
+                            <input placeholder="Icon path" type="text" id="inputPath" class="form-control mb-2" autoFocus/>
+                            <input placeholder="Game Link" type="text" id="inputLink" class="form-control mb-2"/>
+                            <input placeholder="Game name" type="text" id="inputName" class="form-control mb-2"/>
+                            <input placeholder="Game version" type="text" id="inputVersion" class="form-control mb-2"/>
                     
                             <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="addButton">
                             Add
@@ -39,7 +43,18 @@
                 </div>
             </li>
         </ul>
-        
+        <div class="functionParent" id="functionParent">
+            <div class="function">
+                <button class="btn btn-lg btn-danger btn-block mt-2" type="submit" id="closeFunctionButton">
+                    X
+                </button>
+                <div>
+                    <h1>Function: </h1>
+                    <textarea rows="15" placeholder="ERROR: could not load function" type="text" id="functionInput" class="form-control mb-2" autoFocus></textarea>
+                </div>
+            </div>
+        </div>
+
         <script src="scripts/index.js"></script>
     </body>
 </html>
