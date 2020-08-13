@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Game Launcher</title>
         <link rel="stylesheet" href="css/index.css">
+        <script src="/scripts/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     </head>
     <body>
+        <input class="form-control" id="search" type="text" placeholder="Search..">
         <div id="root">
             <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="loadGamesButton">
                 Load Games
@@ -35,7 +38,7 @@
                             <input placeholder="Game name" type="text" id="inputName" class="form-control mb-2"/>
                             <input placeholder="Game version" type="text" id="inputVersion" class="form-control mb-2"/>
                     
-                            <button class="btn btn-lg btn-primary btn-block mt-2" type="submit" id="addButton">
+                            <button class="btn btn-lg btn-primary btn-block mt-2 addButton" type="submit" id="addButton">
                             Add
                             </button>
                         </div>
