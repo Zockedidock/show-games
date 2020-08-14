@@ -57,7 +57,10 @@ addButton.click(() => {
     const inputLink = $("input#inputLink") 
     const inputName = $("input#inputName") 
     const inputVersion = $("input#inputVersion")
-    if ((inputPath.val() === "") || (inputLink.val() === "") || (inputName.val() === "") || (inputVersion.val() === "")){
+    if ((inputPath.val() === "") || 
+        (inputLink.val() === "") || 
+        (inputName.val() === "") || 
+        (inputVersion.val() === "")){
         alert("All inputs have to be filled!!")
     } else {
         gameContainer(
@@ -147,8 +150,10 @@ loadGamesButton.onclick = () => {
 $(document).ready(function(){
     $("#search").on("keyup", function() { //führt funktion bei tippen aus
         var value = $(this).val().toLowerCase(); //setzt den wert der suche in eine Variable
-        $("#root *").filter(function() { //filtert elemente aus div#root
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
+        $(".gameDiv").filter(function() {                 //filtert die gameDivs 
+            $(this).toggle($(this)                        //search query entsprechen
+                .text().toLowerCase().indexOf(value) > -1)//raus die nicht der 
+        });                                               //
     });
 });
+

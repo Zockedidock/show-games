@@ -3222,7 +3222,11 @@ a.text-dark:hover, a.text-dark:focus { color: #121416 !important; }
 
 body { background-color: #26262b; }
 
-#root { display: grid; grid-template-columns: 1fr 1fr 1fr; margin-left: 10%; margin-right: 10%; margin-top: 1rem; margin-bottom: 1rem; grid-row-gap: 1rem; grid-column-gap: 1rem; }
+#root { display: grid; grid-template-columns: 1fr 1fr; margin-top: 1rem; margin-bottom: 1rem; grid-row-gap: 1rem; grid-column-gap: 1rem; }
+
+@media screen and (min-width: 1000px) { #root { grid-template-columns: 1fr 1fr 1fr; margin-left: 10%; margin-right: 10%; } }
+
+@media screen and (min-width: 800px) { #root { margin-left: 10%; margin-right: 10%; } }
 
 #addButton { width: 100%; }
 
@@ -3230,7 +3234,9 @@ body { background-color: #26262b; }
 
 #addGameButtonParent { align-items: center; justify-content: center; text-align: center; display: flex; min-height: 32px; }
 
-#search { margin-top: 1rem; margin-left: 10%; width: 80%; }
+#search { margin-top: 1rem; }
+
+@media screen and (min-width: 800px) { #search { margin-left: 10%; width: 80%; } }
 
 .gameIcon { max-width: 100%; max-height: 100%; }
 
