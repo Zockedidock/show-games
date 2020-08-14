@@ -6,6 +6,7 @@
         <title>Game Launcher</title>
         <link rel="stylesheet" href="css/index.css">
         <script src="/scripts/jquery.min.js"></script>
+        <script src="/scripts/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     </head>
     <body>
@@ -53,8 +54,33 @@
                 </button>
                 <div>
                     <h1>Function: </h1>
-                    <textarea rows="15" placeholder="ERROR: could not load function" type="text" id="functionInput" class="form-control mb-2" autoFocus></textarea>
+                    <textarea rows="15" placeholder="ERROR: could not load function" type="text" id="functionInput2" class="form-control mb-2" autoFocus></textarea>
                 </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="functionModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Function:</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea rows="8" placeholder="ERROR: could not load function" type="text" id="functionInput" class="form-control mb-2" autoFocus></textarea>
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+        
+            </div>
             </div>
         </div>
 

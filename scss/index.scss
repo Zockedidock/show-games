@@ -123,6 +123,10 @@ body {
 .addI {
     grid-column-start: 2;
     grid-column-end: 3;
+    @media screen and (max-width: 666px) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
 
 .title {

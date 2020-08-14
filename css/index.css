@@ -3258,6 +3258,8 @@ body { background-color: #26262b; }
 
 .addI { grid-column-start: 2; grid-column-end: 3; }
 
+@media screen and (max-width: 666px) { .addI { grid-column-start: 1; grid-column-end: 4; } }
+
 .title { align-items: center; justify-content: center; text-align: center; display: inline; width: 100%; }
 
 .title button { width: 10%; }

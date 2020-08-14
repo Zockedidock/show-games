@@ -33,6 +33,8 @@ gameContainer = (iconPath, link, name, version) => {
 
     functionB.innerHTML = "()"
     functionB.className = "btn fB"
+    functionB.setAttribute("data-toggle", "modal")
+    functionB.setAttribute("data-target", "#functionModal")
     
     gameDiv.className = "gameDiv"
     gameDiv.appendChild(img)
@@ -45,7 +47,6 @@ gameContainer = (iconPath, link, name, version) => {
         gameDiv.remove()
     }
     functionB.onclick = () => {
-        functionParent.style.display = "block"
         functionInput.value = `gameContainer(\n    \"${iconPath}\",\n    \"${link}\",\n    \"${name}\",\n    \"${version}\"\n)`
     }
 }
