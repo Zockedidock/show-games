@@ -15,7 +15,7 @@ if (
     localStorage.LSname === undefined &&
     localStorage.LSversion === undefined 
 ) {
-    alert("LocalStorage Items not set! Click the Load Button to Load to load the Games.")
+    alert("LocalStorage Items not set! Click the Load Button to Load to load the Games before adding new Games.")
 } else {
     var tempPath = JSON.parse(localStorage.LSpath)
     var tempLink = JSON.parse(localStorage.LSlink)
