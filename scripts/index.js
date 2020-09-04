@@ -9,6 +9,11 @@ const $root = $("#root"),
       addGameButtonParent = document.getElementById("addGameButtonParent"),
       loadGamesButton = document.getElementById("loadGamesButton")
 
+let tempPath = JSON.parse(localStorage.LSpath)
+let tempLink = JSON.parse(localStorage.LSlink)
+let tempName = JSON.parse(localStorage.LSname)
+let tempVersion = JSON.parse(localStorage.LSversion)
+
 functionParent.style.display = "none"
 
 gameContainer = (iconPath, link, name, version) => {
@@ -42,9 +47,21 @@ gameContainer = (iconPath, link, name, version) => {
     gameDiv.appendChild(gameVersion)
     gameDiv.appendChild(closeB)
     gameDiv.appendChild(functionB)
-
     closeB.onclick = () => {
-        gameDiv.remove()
+        let r = confirm("Are you sure?");
+        if (r == true) {
+            gameDiv.remove()
+
+            tempPath = tempPath.filter(e => e !== link)
+            tempLink = tempLink.filter(e => e !== iconPath)
+            tempName = tempName.filter(e => e !== name)
+            tempVersion = tempVersion.filter(e => e !== version)
+            
+            localStorage.setItem("LSlink", JSON.stringify(tempLink))
+            localStorage.setItem("LSpath", JSON.stringify(tempPath))
+            localStorage.setItem("LSname", JSON.stringify(tempName))
+            localStorage.setItem("LSversion", JSON.stringify(tempVersion))
+        }  
     }
     functionB.onclick = () => {
         functionInput.value = `gameContainer(\n    \"${iconPath}\",\n    \"${link}\",\n    \"${name}\",\n    \"${version}\"\n)`
@@ -53,11 +70,12 @@ gameContainer = (iconPath, link, name, version) => {
 
 addParendDiv.style.display = "none"
 
+const $inputPath = $("input#inputPath") 
+const $inputLink = $("input#inputLink") 
+const $inputName = $("input#inputName") 
+const $inputVersion = $("input#inputVersion")
+
 $addButton.click(() => {
-    const $inputPath = $("input#inputPath") 
-    const $inputLink = $("input#inputLink") 
-    const $inputName = $("input#inputName") 
-    const $inputVersion = $("input#inputVersion")
     if (($inputPath.val() === "") || 
         ($inputLink.val() === "") || 
         ($inputName.val() === "") || 
@@ -70,11 +88,23 @@ $addButton.click(() => {
             $inputName.val(),
             $inputVersion.val()
         )
+
+        tempPath.push($inputLink.val())
+        tempLink.push($inputPath.val())
+        tempName.push($inputName.val())
+        tempVersion.push($inputVersion.val())
+
+        localStorage.setItem("LSlink", JSON.stringify(tempLink))
+        localStorage.setItem("LSpath", JSON.stringify(tempPath))
+        localStorage.setItem("LSname", JSON.stringify(tempName))
+        localStorage.setItem("LSversion", JSON.stringify(tempVersion))
+
         $inputPath.val("")
         $inputLink.val("")
         $inputName.val("")
         $inputVersion.val("")
     }
+    
 })
 
 closeButton.onclick = () => {

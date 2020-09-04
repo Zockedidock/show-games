@@ -56,6 +56,13 @@ body {
     }
 }
 
+#load {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 .gameIcon {
     max-width: 100%;
     max-height: 100%;
