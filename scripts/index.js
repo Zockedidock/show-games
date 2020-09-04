@@ -9,10 +9,20 @@ const $root = $("#root"),
       addGameButtonParent = document.getElementById("addGameButtonParent"),
       loadGamesButton = document.getElementById("loadGamesButton")
 
-let tempPath = JSON.parse(localStorage.LSpath)
-let tempLink = JSON.parse(localStorage.LSlink)
-let tempName = JSON.parse(localStorage.LSname)
-let tempVersion = JSON.parse(localStorage.LSversion)
+if (
+    localStorage.LSpath === undefined &&
+    localStorage.LSlink === undefined &&
+    localStorage.LSname === undefined &&
+    localStorage.LSversion === undefined 
+) {
+    alert("LocalStorage Items not set! Click the Load Button to Load to load the Games.")
+} else {
+    var tempPath = JSON.parse(localStorage.LSpath)
+    var tempLink = JSON.parse(localStorage.LSlink)
+    var tempName = JSON.parse(localStorage.LSname)
+    var tempVersion = JSON.parse(localStorage.LSversion)
+}
+
 
 functionParent.style.display = "none"
 
